@@ -1,0 +1,16 @@
+{
+  "name": "sassworkflow_devserver",
+  "version": "1.0.0",
+  "description": "Boilerplate for Sass Projects",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
