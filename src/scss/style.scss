@@ -1,5 +1,45 @@
-$bg-color: #f2f2f2;
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+/* VARIABLES DECLARATION */
+$spacing: 5vw;
+$box-width: 40vw;
+$padding: 2.5vw;
+
+/* MIXINS */
+@mixin main-border() {
+  border-radius: 5px;
+  border: 3px solid #326496;
+  background-color: #fff
+}
+
 
 body {
-  background-color: $bg-color;
+  background-color: #f2f2f2;
+  margin-top: $spacing;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  color: #2f2f2f;
+}
+
+.container {
+  width: (2*$box-width + $spacing);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, $box-width);
+  grid-column-gap: $spacing;
+  #input {
+    @include main-border();
+    padding: $padding;
+    grid-column: 1;
+    height: 50vh;
+  }
+  #output {
+    @include main-border();
+    grid-column: 2;
+    padding: 0 $padding;
+    #outputContent * {
+      width: $box-width - $spacing;
+      text-align: left;
+    }
+  }
 }

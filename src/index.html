@@ -7,8 +7,25 @@
   <title>Markdown Previewer</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <h1>Markdown Previewer</h1>
-  <p>Hello World!</p>
+
+  <div id="app">
+    <h1>MarkDown Previewer</h1>
+    <div class="container">
+      <h4>INPUT</h4>
+      <h4>OUTPUT</h4>
+      <textarea id="input" v-model="inputText" placeholder="Write MarkDown here..."></textarea>
+      <div id="output">
+        <div id="outputContent"></div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://unpkg.com/vue@2.0.3/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+<script src="app.js"></script>
+
 </body>
+
 </html>
